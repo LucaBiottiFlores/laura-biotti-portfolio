@@ -1,229 +1,400 @@
-<!doctype html>
-<html lang="es" data-theme="light">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laura Biotti Flores — Diseñadora gráfica y UX/UI</title>
-  <meta name="description" content="Portafolio de Laura Biotti Flores, diseñadora gráfica y UX/UI especializada en salud y email marketing (Salesforce Marketing Cloud). Santiago, Chile." />
-  <meta name="author" content="Laura Biotti Flores" />
-  <meta property="og:title" content="Laura Biotti Flores — Diseñadora gráfica y UX/UI" />
-  <meta property="og:description" content="Diseño de productos digitales y sistemas de marca para salud y email marketing." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-  <header class="topbar" id="top">
-    <a class="wordmark" href="#inicio" aria-label="Laura Biotti Flores, inicio">LAURA<span>⁄</span>BIOTTI</a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="#demo">Demo</a>
-      <a href="#trabajo">Trabajo</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <div class="topbar-actions">
-      <button class="theme-toggle" type="button" aria-label="Cambiar tema" data-theme-toggle>
-        <span data-theme-label>Oscuro</span>
-        <span class="toggle-track"><span></span></span>
-      </button>
-      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-toggle>
-        <span></span><span></span>
-      </button>
+<x-dc>
+<helmet>
+<title>Laura Biotti Flores — Diseñadora gráfica, experiencia de usuario y productos digitales</title>
+<meta name="description" content="Laura Biotti Flores: diseñadora gráfica, diseñadora de experiencia de usuario (UX/UI) y diseñadora de productos digitales. Especialista en Content Builder de Salesforce Marketing Cloud. Santiago, Chile.">
+<meta name="keywords" content="Diseñadora gráfica, Diseñadora experiencia de usuario, Diseñadora UX/UI, Diseñadora productos digitales, Content Builder, Marketing Cloud, Salesforce, Laura Biotti Flores">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root { --paper:#F6F4F1; --sand:#E4DED2; --gray:#555555; --blue:#0259DD; --ink:#151515; --line:rgba(85,85,85,.22); --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"DM Mono",ui-monospace,Menlo,monospace; --soft:14px 14px 34px rgba(120,108,88,.22), -12px -12px 30px rgba(255,255,255,.95); --soft-sm:8px 8px 18px rgba(120,108,88,.2), -7px -7px 16px rgba(255,255,255,.95); --ease:cubic-bezier(.22,1,.36,1); }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--paper); }
+body { margin: 0; min-width: 320px; color: var(--ink); background: var(--paper); font-family: var(--sans); font-size: 17px; line-height: 1.55; text-wrap: pretty; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<header id="top" data-site-header="1" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);">
+  <div style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 1rem clamp(1.1rem,4vw,3rem);">
+    <a href="#inicio" aria-label="Laura Biotti Flores, inicio" style="font-weight: 800; letter-spacing: -0.04em; font-size: 1.1rem;">LAURA<span style="color: var(--blue); padding: 0 0.1em;">⁄</span>BIOTTI</a>
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Navegación principal" style="display: flex; gap: clamp(0.9rem,2vw,2.4rem); flex-wrap: wrap; flex-shrink: 0; white-space: nowrap; font-size: 0.85rem; color: var(--gray);">
+        <a href="#trabajo" style-hover="color: var(--ink);">Trabajo</a>
+        <a href="#emails" style-hover="color: var(--ink);">Emails</a>
+        <a href="#demos" style-hover="color: var(--ink);">Demos</a>
+        <a href="#manual" style-hover="color: var(--ink);">Manual</a>
+        <a href="#sobre-mi" style-hover="color: var(--ink);">Sobre mí</a>
+      </nav>
+      <a href="#contacto" style="padding: 0.65rem 1.25rem; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 0.85rem; font-weight: 600; transition: background 200ms;" style-hover="background: var(--blue); color: #fff;">Contacto</a>
+      </sc-if>
+    <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="Abrir menú" aria-expanded="{{ menuOpen }}" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1rem; border: 0; border-radius: 999px; background: var(--ink); color: var(--paper); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;">{{ menuLabel }} <span aria-hidden="true" style="display: flex; flex-direction: column; gap: 4px;"><span style="display: block; width: 16px; height: 2px; background: var(--paper);"></span><span style="display: block; width: 16px; height: 2px; background: var(--paper);"></span></span></button>
+    </sc-if>
+    <sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
+      <nav aria-label="Navegación móvil" style="flex-basis: 100%; display: flex; flex-direction: column; padding: 0.5rem 0 0.4rem; border-top: 1px solid var(--line);">
+        <a href="#trabajo" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Trabajo <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+        <a href="#emails" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Emails <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+        <a href="#demos" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Demos <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+        <a href="#manual" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Manual <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+        <a href="#sobre-mi" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Sobre mí <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+        <a href="#contacto" onClick="{{ closeMenu }}" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 0.2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; font-weight: 600;">Contacto <span aria-hidden="true" style="color: var(--blue);">↗</span></a>
+      </nav>
+    </sc-if>
+  </div>
+</header>
+<div data-header-spacer="1" aria-hidden="true" style="height: 4.4rem;"></div>
+
+<main>
+  <section id="inicio" data-screen-label="Portada" style="position: relative; z-index: 5; overflow: visible; min-height: max(clamp(480px, 52vw, 720px), calc(100vh - 9rem)); display: flex; flex-direction: column; justify-content: center;">
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+      <div aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: min(58%, 940px);">
+        <img src="assets/hero-flores-h.png" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, var(--paper) 0%, rgba(246,244,241,.94) 10%, rgba(246,244,241,.8) 22%, rgba(246,244,241,.58) 36%, rgba(246,244,241,.34) 50%, rgba(246,244,241,.15) 63%, rgba(246,244,241,.04) 75%, rgba(246,244,241,0) 85%), linear-gradient(to top, var(--paper) 0%, rgba(246,244,241,.6) 12%, rgba(246,244,241,.2) 26%, rgba(246,244,241,0) 40%), linear-gradient(to bottom, rgba(246,244,241,.7) 0%, rgba(246,244,241,.25) 12%, rgba(246,244,241,0) 26%);"></div>
+      </div>
+    </sc-if>
+    <div style="position: relative; width: 100%; max-width: 1320px; margin: 0 auto; padding: clamp(2rem,4vw,3rem) clamp(1.1rem,4vw,3rem);">
+  <div style="min-width: 0; max-width: min(46rem, max(calc(50vw - 3rem), calc((760px - 100vw) * 1000)));">
+      <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">Diseñadora de productos digitales · Santiago, Chile</span>
+      <div>
+      <h1 style="margin: 1.6rem 0 0; font-size: clamp(3rem,7.2vw,6.4rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.05em; text-transform: uppercase;"><span style="color: var(--blue);">Laura</span> Biotti Flores</h1>
+      <p style="margin: 1.6rem 0 0; max-width: 32rem; font-size: calc(clamp(1rem,1.5vw,1.3rem) - 2px); line-height: 1.6; color: var(--gray);"><strong style="font-weight: 700; color: var(--ink);">Diseñadora de productos digitales</strong> enfocada en la <strong style="font-weight: 700; color: var(--ink);">experiencia de usuario</strong> e implementación técnica para crear soluciones claras, funcionales y accesibles.</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.2rem;">
+        <div style="position: relative;">
+          <button type="button" onClick="{{ toggleProj }}" aria-expanded="{{ projExpanded }}" style="display: inline-flex; align-items: center; gap: 0.9rem; padding: 0.45rem 0.45rem 0.45rem 1.4rem; border: 0; border-radius: 999px; background: var(--ink); color: var(--paper); font: inherit; font-size: 0.92rem; font-weight: 600; cursor: pointer; transition: transform 200ms var(--ease);" style-hover="transform: translateY(-2px);">Ver proyectos <span style="width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--paper); color: var(--ink); display: grid; place-items: center; font-size: 1rem; transition: transform 250ms var(--ease); transform: {{ projArrow }};">↓</span></button>
+          <sc-if value="{{ projOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; top: calc(100% + 0.6rem); left: 0; z-index: 30; min-width: 17rem; padding: 0.4rem; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 24px 48px -16px rgba(21,21,21,.35), 0 4px 12px rgba(21,21,21,.08); display: flex; flex-direction: column;">
+              <a href="#trabajo" onClick="{{ closeProj }}" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; padding: 0 0.9rem; font-size: 0.92rem; font-weight: 600;" style-hover="background: var(--sand); color: var(--blue);">Proyectos seleccionados <span aria-hidden="true" style="color: var(--blue);">↘</span></a>
+              <a href="#emails" onClick="{{ closeProj }}" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; padding: 0 0.9rem; font-size: 0.92rem; font-weight: 600;" style-hover="background: var(--sand); color: var(--blue);">Emails en Marketing Cloud <span aria-hidden="true" style="color: var(--blue);">↘</span></a>
+              <a href="#demos" onClick="{{ closeProj }}" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; padding: 0 0.9rem; font-size: 0.92rem; font-weight: 600;" style-hover="background: var(--sand); color: var(--blue);">Demos interactivas <span aria-hidden="true" style="color: var(--blue);">↘</span></a>
+              <a href="#manual" onClick="{{ closeProj }}" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; padding: 0 0.9rem; font-size: 0.92rem; font-weight: 600;" style-hover="background: var(--sand); color: var(--blue);">Manual de marca <span aria-hidden="true" style="color: var(--blue);">↘</span></a>
+            </div>
+          </sc-if>
+        </div>
+        <a href="#contacto" style="padding: 0.85rem 1.4rem; border-radius: 999px; background: var(--paper); box-shadow: var(--soft-sm); font-size: 0.92rem; font-weight: 600; transition: box-shadow 200ms;" style-hover="box-shadow: inset 4px 4px 10px rgba(120,108,88,.2), inset -4px -4px 10px rgba(255,255,255,.95);">Escríbeme</a>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-grid layout">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Diseñadora gráfica y UX/UI</p>
-          <h1 class="display">Laura<br />Biotti <em>Flores</em></h1>
-          <p class="hero-sub">Diseño productos digitales y sistemas de marca para salud y email marketing, con foco en claridad y accesibilidad.</p>
-          <div class="hero-actions">
-            <a class="button" href="#trabajo">Ver trabajo</a>
-          </div>
-        </div>
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="hero-orb"></div>
-          <figure class="hero-frame">
-            <img src="assets/marca_sf_p1.jpg" alt="" width="1400" height="787" loading="eager" />
-          </figure>
-          <span class="hero-stamp">DISEÑO<br />EMAIL</span>
-        </div>
+    </div>
+    <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+      <div aria-hidden="true" style="position: relative; width: 100%; height: 260px; margin-top: -1rem;">
+        <img src="assets/hero-flores-h.png" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, var(--paper) 0%, rgba(246,244,241,0) 30%, rgba(246,244,241,0) 75%, var(--paper) 100%);"></div>
       </div>
-    </section>
+    </sc-if>
+  </section>
 
-    <section class="demo section" id="demo">
-      <div class="layout">
-        <div class="section-head reveal">
-          <h2>Demo <em>interactiva</em></h2>
-          <p>Tienda online para mascotas: navega el producto real, prueba categorías, carrito y el flujo de compra completo.</p>
-        </div>
-        <div class="demo-wrap reveal">
-          <iframe class="demo-frame" src="demo-tienda/index.html" title="Demo interactiva de la tienda online para mascotas" loading="lazy"></iframe>
-        </div>
-        <p class="demo-note">¿Lo quieres más grande? <a href="demo-tienda/index.html" target="_blank" rel="noopener">Abrir en pantalla completa ↗</a></p>
-      </div>
-    </section>
-
-    <section class="work section" id="trabajo">
-      <div class="layout">
-        <div class="section-head reveal">
-          <h2>Proyectos<br /><em>seleccionados</em></h2>
-          <p>Tres piezas que muestran cómo trabajo: del problema al producto, con el detalle que el medio exige.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-item reveal w-1">
-            <figure class="project-media" data-lightbox>
-              <img src="assets/cancer.jpg" alt="Programa Cáncer de Próstata Avanzado, UC CHRISTUS" loading="lazy" width="1400" height="4724" />
-            </figure>
-            <div class="work-meta">
-              <span class="client">UC CHRISTUS</span>
-              <h3>Programa Cáncer de Próstata Avanzado</h3>
-              <p class="role">Diseñadora UI/UX externa</p>
-              <p class="desc">Página informativa del programa: jerarquía de contenido médico, reserva de hora y presentación del equipo clínico, pensada para lectura rápida en móvil.</p>
-            </div>
-          </article>
-
-          <article class="work-item reveal w-2">
-            <figure class="project-media" data-lightbox>
-              <img src="assets/marca_sf_p1.jpg" alt="Manual de marca de emails en Salesforce Marketing Cloud" loading="lazy" width="1400" height="787" />
-            </figure>
-            <div class="work-meta">
-              <span class="client">Vinci Compass</span>
-              <h3>Manual de marca para emails</h3>
-              <p class="role">Diseñadora gráfica y desarrolladora web</p>
-              <p class="desc">Sistema de email en Salesforce Marketing Cloud: color, tipografía, botones y jerarquías con medidas exactas y código de referencia.</p>
-            </div>
-          </article>
-
-          <article class="work-item reveal w-3">
-            <figure class="project-media" data-lightbox>
-              <img src="assets/animo.jpg" alt="Unidad de Trastornos del Ánimo, UC CHRISTUS" loading="lazy" width="1308" height="3069" />
-            </figure>
-            <div class="work-meta">
-              <span class="client">UC CHRISTUS</span>
-              <h3>Unidad de Trastornos del Ánimo</h3>
-              <p class="role">Diseñadora UI/UX externa</p>
-              <p class="desc">Landing de salud mental: estructura clara para servicios, especialistas y contacto, con un tono cercano y accesible.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section" id="sobre-mi">
-      <div class="layout about-grid">
-        <div class="about-left reveal">
-          <h2>Sobre <em>mí</em></h2>
-          <p class="about-summary">Diseñadora gráfica con foco en UX/UI y email marketing, especializada en el sector salud. Combino diseño de producto digital con desarrollo de correos en Salesforce Marketing Cloud, cuidando accesibilidad y consistencia en cada entrega.</p>
-          <div class="capabilities">
-            <span>Diseño de producto digital</span>
-            <span>Email marketing y SFMC</span>
-            <span>Sistemas de diseño</span>
-            <span>Diseño gráfico editorial</span>
-          </div>
-        </div>
-        <div class="about-right reveal">
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="period">Actualidad</span>
-              <h3>Vinci Compass</h3>
-              <p class="role">Diseñadora gráfica y desarrolladora web</p>
-              <p class="desc">Diseño y desarrollo de mailings en Marketing Cloud de Salesforce (HTML inline responsivo) para distintos clientes, construidos en Content Builder.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="period">Jul 2025 - May 2026</span>
-              <h3>UC CHRISTUS</h3>
-              <p class="role">Diseñadora UI/UX externa</p>
-              <p class="desc">Productos digitales, landing pages, prototipos y contenido para redes sociales y email marketing en el sector salud.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="period">Jul 2025 - Actualidad</span>
-              <h3>Wodobox</h3>
-              <p class="role">Consultora Marketing Cloud Salesforce</p>
-              <p class="desc">Email marketing en Content Builder, manejo de bases de datos y construcción de informes de salud.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="period">Ene 2024 - Mar 2024</span>
-              <h3>Banco BICE</h3>
-              <p class="role">Práctica profesional</p>
-              <p class="desc">Colaboración en un sistema de diseño para consistencia visual y funcional, pantallas y piezas de marketing, con foco en arquitectura de información y UX.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="period">2019 - 2023</span>
-              <h3>Duoc UC</h3>
-              <p class="role">Diseño gráfico</p>
-              <p class="desc">Formación en diseño gráfico, con base en composición, tipografía e identidad visual.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="more section" id="mas-proyectos">
-      <div class="layout">
-        <div class="section-head reveal">
-          <h2>Más <em>trabajo</em></h2>
-          <p>Otras piezas para el sector salud y campañas de email marketing.</p>
-        </div>
-        <div class="more-grid">
-          <figure class="more-item reveal" data-lightbox>
-            <img src="assets/reproductiva.jpg" alt="Unidad de Medicina Reproductiva, UC CHRISTUS" loading="lazy" width="1126" height="3394" />
-            <figcaption><span>UC CHRISTUS</span>Unidad de Medicina Reproductiva</figcaption>
-          </figure>
-          <figure class="more-item reveal" data-lightbox>
-            <img src="assets/nacer.jpg" alt="Programa de Cuidados Paliativos Perinatales, UC CHRISTUS" loading="lazy" width="1127" height="3278" />
-            <figcaption><span>UC CHRISTUS</span>Cuidados Paliativos Perinatales</figcaption>
-          </figure>
-          <figure class="more-item reveal" data-lightbox>
-            <img src="assets/eii.jpg" alt="Unidad de Enfermedades Inflamatorias Intestinales, UC CHRISTUS" loading="lazy" width="1400" height="5342" />
-            <figcaption><span>UC CHRISTUS</span>Enfermedades Inflamatorias Intestinales</figcaption>
-          </figure>
-          <figure class="more-item reveal" data-lightbox>
-            <img src="assets/marca_sf_p2.jpg" alt="Especificaciones de botones del manual de marca de emails" loading="lazy" width="1400" height="787" />
-            <figcaption><span>Vinci Compass</span>Especificación de componentes email</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section" id="contacto">
-      <div class="layout contact-grid">
-        <div class="contact-copy reveal">
-          <h2>Trabajemos<br /><em>juntos</em></h2>
-          <p>Si buscas una diseñadora que entienda salud, email marketing y producto digital, escríbeme. Respondo con el detalle de cada caso.</p>
-        </div>
-        <div class="contact-links reveal">
-          <a class="button" href="mailto:lm.biottiflores@gmail.com">Escríbeme</a>
-          <span class="contact-line">lm.biottiflores@gmail.com</span>
-          <a class="contact-line" href="https://www.linkedin.com/in/laurabiottiflores/" target="_blank" rel="noopener">LinkedIn</a>
-          <span class="contact-line">Santiago, Chile</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <a class="wordmark" href="#inicio">LAURA<span>⁄</span>BIOTTI</a>
-    <p>Diseño gráfico, UX/UI y email marketing. Santiago, Chile.</p>
-    <a class="back-top" href="#inicio">Volver arriba ↑</a>
-  </footer>
-
-  <div class="lightbox" id="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada del trabajo">
-    <button class="lightbox-close" type="button" aria-label="Cerrar" data-lightbox-close>&times;</button>
-    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Anterior" data-lightbox-prev>&lsaquo;</button>
-    <button class="lightbox-nav lightbox-next" type="button" aria-label="Siguiente" data-lightbox-next>&rsaquo;</button>
-    <figure class="lightbox-figure">
-      <img class="lightbox-img" src="" alt="" />
-      <figcaption class="lightbox-caption"></figcaption>
-    </figure>
+  <div aria-label="Herramientas: Figma, Figma Make, Salesforce Marketing Cloud, Illustrator, Photoshop, Acrobat y Claude" style="overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0.8rem 0;">
+    {{ marquee }}
   </div>
 
-  <script src="js/main.js"></script>
+  <section id="trabajo" data-screen-label="Trabajo" style="background: var(--sand); padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.5rem 4rem; align-items: end; padding-bottom: clamp(3rem,6vw,4.5rem);">
+        <div>
+          <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">UC CHRISTUS</span>
+          <h2 style="margin: 1.2rem 0 0; font-size: clamp(2.2rem,4.6vw,3.8rem); line-height: 1; letter-spacing: -0.045em; font-weight: 800;">Proyectos <span style="color: var(--blue);">seleccionados</span></h2>
+        </div>
+        <p style="margin: 0; max-width: 34rem; font-size: 0.98rem; line-height: 1.65; color: var(--gray);">Páginas de unidades y programas: información médica densa ordenada en una lectura clara, pensada para leerse rápido en el móvil.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: clamp(2rem,3vw,2.5rem);">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+          <article style="display: flex; flex-direction: column; min-width: 0; background: var(--paper); box-shadow: 12px 12px 30px rgba(120,108,88,.28), -10px -10px 26px rgba(255,255,255,.55); transition: transform 300ms var(--ease);" style-hover="transform: translateY(-4px);">
+            <a href="{{ p.pdf }}" target="_blank" rel="noopener" aria-label="Abrir {{ p.title }}" style="display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #fff;">
+              <img src="{{ p.img }}" alt="{{ p.title }}, UC CHRISTUS" loading="lazy" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+            </a>
+            <div style="display: flex; flex-direction: column; flex: 1; padding: 1.5rem 1.5rem 1.6rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                <span style="font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue);">{{ p.kind }}</span>
+                <span style="font-family: var(--mono); font-size: 0.72rem; color: var(--gray);">{{ p.num }}</span>
+              </div>
+              <h3 style="margin: 0.7rem 0 0; font-size: 1.32rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.025em;">{{ p.title }}</h3>
+              <p style="margin: 0.7rem 0 0; font-size: 0.9rem; line-height: 1.6; color: var(--gray);">{{ p.desc }}</p>
+              <a href="{{ p.pdf }}" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.6rem; margin-top: auto; padding-top: 1.3rem; font-size: 0.85rem; font-weight: 600;" style-hover="color: var(--blue);">Ver la página completa <span style="width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-size: 0.85rem;">↗</span></a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="emails" data-screen-label="Emails" style="background: var(--ink); color: var(--paper); padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.5rem 4rem; align-items: end; padding-bottom: clamp(3rem,6vw,4.5rem);">
+        <div>
+          <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid rgba(246,244,241,.5); border-radius: 999px; font-size: 0.8rem; color: rgba(246,244,241,.8);">Vinci Compass · Salesforce Marketing Cloud</span>
+          <h2 style="margin: 1.2rem 0 0; font-size: clamp(2.2rem,4.6vw,3.8rem); line-height: 1; letter-spacing: -0.045em; font-weight: 800;">Emails en <span style="color: #6EA2F5;">Marketing Cloud</span></h2>
+        </div>
+        <p style="margin: 0; max-width: 34rem; font-size: 0.98rem; line-height: 1.65; color: rgba(246,244,241,.72);">Envíos construidos en Content Builder, con <strong style="display: inline-block; padding: 0.05rem 0.55rem; border: 1px solid #6EA2F5; border-radius: 999px; font-family: var(--mono); font-weight: 500; font-size: 0.9em; color: #6EA2F5;">HTML inline responsivo</strong>, para clientes de inversión en Chile y Brasil. Desplázate dentro de cada uno para leerlo completo.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: clamp(2rem,3vw,2.5rem); align-items: start;">
+        <sc-for list="{{ emails }}" as="e" hint-placeholder-count="3">
+          <article style="display: flex; flex-direction: column; min-width: 0; border: 1px solid rgba(246,244,241,.18); padding: 0.75rem;">
+            <div data-email-box="1" style="position: relative; height: 640px; overflow: hidden; background: #fff;">
+              <iframe src="{{ e.src }}" title="{{ e.title }}" onLoad="{{ onFrameLoad }}" style="position: absolute; top: 0; left: 0; display: block; width: 600px; height: 640px; border: 0; transform-origin: 0 0;"></iframe>
+            </div>
+            <div style="padding: 1.2rem 0.6rem 0.8rem;">
+              <span style="font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: #6EA2F5;">{{ e.kind }}</span>
+              <h3 style="margin: 0.6rem 0 0; font-size: 1.32rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.025em;">{{ e.title }}</h3>
+              <p style="margin: 0.6rem 0 0; font-size: 0.9rem; line-height: 1.6; color: rgba(246,244,241,.72);">{{ e.desc }}</p>
+              <a href="{{ e.src }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.2rem; font-size: 0.85rem; font-weight: 600;" style-hover="color: #6EA2F5;">Abrir el email <span style="width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--paper); color: var(--ink); display: grid; place-items: center; font-size: 0.85rem;">↗</span></a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="demos" data-screen-label="Demos interactivas" style="padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.5rem 4rem; align-items: end; padding-bottom: clamp(3rem,6vw,4.5rem);">
+        <div>
+          <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">Figma Make · Prototipos</span>
+          <h2 style="margin: 1.2rem 0 0; font-size: clamp(2.2rem,4.6vw,3.8rem); line-height: 1; letter-spacing: -0.045em; font-weight: 800;">Demos <span style="color: var(--blue);">interactivas</span></h2>
+        </div>
+        <p style="margin: 0; max-width: 34rem; font-size: 0.98rem; line-height: 1.65; color: var(--gray);">Prototipos navegables de e-commerce: recorre el catálogo, el detalle de producto y el carrito como lo haría un cliente.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(2rem,3vw,2.5rem);">
+        <sc-for list="{{ demos }}" as="d" hint-placeholder-count="2">
+          <article style="display: flex; flex-direction: column; min-width: 0; background: var(--paper); box-shadow: var(--soft);">
+            <a href="{{ d.url }}" target="_blank" rel="noopener" aria-label="Abrir demo {{ d.title }}" style="position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand);">
+              <img src="{{ d.img }}" alt="Portada de la demo {{ d.title }}" loading="lazy" style="position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform 600ms var(--ease);" style-hover="transform: scale(1.02);">
+            </a>
+            <div style="display: flex; flex-direction: column; flex: 1; padding: 1.5rem 1.5rem 1.6rem;">
+              <span style="font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue);">{{ d.kind }}</span>
+              <h3 style="margin: 0.7rem 0 0; font-size: 1.5rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.025em;">{{ d.title }}</h3>
+              <p style="margin: 0.7rem 0 1.4rem; font-size: 0.9rem; line-height: 1.6; color: var(--gray);">{{ d.desc }}</p>
+              <a href="{{ d.url }}" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.9rem; margin-top: auto; padding: 0.45rem 0.45rem 0.45rem 1.4rem; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 0.9rem; font-weight: 600;" style-hover="background: var(--blue); color: #fff;">Probar la demo <span style="width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--paper); color: var(--ink); display: grid; place-items: center;">↗</span></a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="manual" data-screen-label="Manual de marca" style="padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(3rem,6vw,6rem); align-items: start;">
+      <div style="position: relative; min-width: 0; padding: 2rem 2rem 0 0; margin-top: 1.35rem;">
+        <div aria-hidden="true" style="position: absolute; inset: 0 0 2rem 2rem; border: 1px solid var(--gray);"></div>
+        <a href="docs/manual-marca-sfmc.pdf" target="_blank" rel="noopener" style="position: relative; display: block; background: #fff; box-shadow: var(--soft);">
+          <img src="assets/manual-cover.png" alt="Portada del Manual de Marca: Emails en Salesforce Marketing Cloud, Vinci Compass 2026" style="display: block; width: 100%; height: auto;">
+        </a>
+      </div>
+      <div style="min-width: 0;">
+        <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">Vinci Compass · Diseño y desarrollo</span>
+        <h2 style="margin: 1.2rem 0 0; font-size: clamp(2.2rem,4.2vw,3.4rem); line-height: 1.02; letter-spacing: -0.045em; font-weight: 800;">Manual de marca para <span style="color: var(--blue);">email marketing</span></h2>
+        <p style="margin: 1.2rem 0 0; font-size: 1rem; font-weight: 600;">Exclusivo para los envíos de Salesforce Marketing Cloud.</p>
+        <p style="margin: 0.8rem 0 0; max-width: 34rem; font-size: 0.95rem; line-height: 1.65; color: var(--gray);">Un mismo envío se abre en Gmail, en Outlook y en una decena de aplicaciones móviles. Este manual no reemplaza al manual de marca general de Vinci Compass: traduce su identidad solo al email marketing, con medidas exactas, código de referencia y la razón de cada decisión.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 1rem; margin-top: 2rem;">
+          <sc-for list="{{ specs }}" as="s" hint-placeholder-count="6">
+            <div style="padding: 1rem 1.1rem; background: var(--paper); box-shadow: var(--soft-sm);">
+              <span style="display: block; font-size: 0.78rem; color: var(--gray);">{{ s.label }}</span>
+              <span style="display: block; margin-top: 0.3rem; font-family: var(--mono); font-size: 0.88rem; font-weight: 500;">{{ s.val }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <a href="docs/manual-marca-sfmc.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.9rem; margin-top: 2.2rem; padding: 0.45rem 0.45rem 0.45rem 1.4rem; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 0.92rem; font-weight: 600;" style-hover="color: var(--paper); background: var(--blue);">Abrir el manual · 23 págs. <span style="width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--paper); color: var(--ink); display: grid; place-items: center;">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificacion" data-screen-label="Certificación" style="background: var(--sand); padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(3rem,6vw,6rem); align-items: center;">
+      <div style="min-width: 0;">
+        <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">Certificación · 2025</span>
+        <h2 style="margin: 1.2rem 0 0; font-size: clamp(2rem,3.8vw,3.1rem); line-height: 1.04; letter-spacing: -0.04em; font-weight: 800;">Salesforce Marketing Cloud <span style="color: var(--blue);">Engagement Foundations</span></h2>
+        <div style="margin-top: 2rem; border-top: 1px solid var(--line);">
+          <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 0.9rem 0; border-bottom: 1px solid var(--line);"><span style="font-size: 0.92rem; color: var(--gray);">Emitida</span><span style="font-family: var(--mono); font-size: 0.85rem;">17 ago 2025</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 0.9rem 0; border-bottom: 1px solid var(--line);"><span style="font-size: 0.92rem; color: var(--gray);">ID de credencial</span><span style="font-family: var(--mono); font-size: 0.85rem;">6675369</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 0.9rem 0; border-bottom: 1px solid var(--line);"><span style="font-size: 0.92rem; color: var(--gray);">Verificación</span><a href="https://sforce.co/verifycerts" target="_blank" rel="noopener" style="font-family: var(--mono); font-size: 0.85rem; color: var(--blue);">sforce.co/verifycerts ↗</a></div>
+        </div>
+      </div>
+      <div style="position: relative; min-width: 0; padding: 0 0 2rem 2rem;">
+        <div aria-hidden="true" style="position: absolute; inset: 2rem 2rem 0 0; background: var(--ink);"></div>
+        <figure style="position: relative; margin: 0; background: #fff; box-shadow: var(--soft); transform: translate(2rem, -2rem);">
+          <img src="assets/certificado-sfmc.jpg" alt="Certificado Salesforce Marketing Cloud Engagement Foundations otorgado a Laura Biotti Flores" style="display: block; width: 100%; height: auto;">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" data-screen-label="Sobre mí" style="padding: clamp(5rem,10vw,8.5rem) 0;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(1.1rem,4vw,3rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(3rem,6vw,6rem); align-items: start;">
+      <div style="min-width: 0;">
+        <span style="display: inline-flex; padding: 0.4rem 1rem; border: 1px solid var(--gray); border-radius: 999px; font-size: 0.8rem; color: var(--gray);">Sobre mí</span>
+        <h2 style="margin: 1.2rem 0 0; font-size: clamp(2.2rem,4.6vw,3.8rem); line-height: 1; letter-spacing: -0.045em; font-weight: 800;">Diseño con foco en <span style="color: var(--blue);">claridad</span></h2>
+        <p style="margin: 1.5rem 0 0; max-width: 34rem; font-size: 1rem; line-height: 1.65; color: var(--gray);"><span style="display: block; margin-bottom: 0.5rem; font-size: 1.15rem; font-weight: 700; color: var(--ink);">Hasta hoy soy...</span>Diseñadora de productos digitales con foco en email marketing. Combino diseño de producto digital con desarrollo de correos en Salesforce Marketing Cloud, cuidando accesibilidad y consistencia en cada entrega.<span style="display: block; margin-top: 1.2rem; font-size: 1.15rem; font-weight: 700; line-height: 1.45; color: var(--ink);">Estoy disponible para nuevas oportunidades de trabajar en proyectos más allá de mi área y crear productos para todo tipo de necesidad.</span></p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 2rem;">
+          <sc-for list="{{ skills }}" as="k" hint-placeholder-count="4">
+            <span style="padding: 0.65rem 1.1rem; border-radius: 999px; background: var(--paper); box-shadow: var(--soft-sm); font-size: 0.82rem; font-weight: 600;">{{ k }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <div style="min-width: 0; display: flex; flex-direction: column; gap: 1.1rem;">
+        <sc-for list="{{ experience }}" as="x" hint-placeholder-count="5">
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: flex-start; padding: 1.4rem clamp(1.1rem,3vw,1.5rem); background: var(--paper); box-shadow: var(--soft-sm);">
+            <div style="width: 6.5rem; height: 4.5rem; padding: 0.6rem; background: #fff; box-shadow: inset 3px 3px 8px rgba(120,108,88,.18), inset -3px -3px 8px rgba(255,255,255,.9); display: grid; place-items: center;">
+              <sc-if value="{{ x.src }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ x.src }}" alt="Logo {{ x.org }}" style="display: block; width: 5.3rem; height: {{ x.logoH }}; object-fit: contain;">
+              </sc-if>
+            </div>
+            <div style="flex: 1 1 13rem; min-width: 0;">
+              <span style="display: block; margin-bottom: 0.3rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gray);">{{ x.when }}</span>
+              <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;">{{ x.org }}</h3>
+              <p style="margin: 0.15rem 0 0; font-size: 0.85rem; font-weight: 600; color: var(--blue);">{{ x.role }}</p>
+              <p style="margin: 0.5rem 0 0; font-size: 0.88rem; line-height: 1.6; color: var(--gray);">{{ x.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" data-screen-label="Contacto" style="padding: 0 clamp(1.1rem,4vw,3rem) clamp(4rem,8vw,6rem);">
+    <div style="max-width: 1224px; margin: 0 auto; background: var(--ink); color: var(--paper); padding: clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem); text-align: center;">
+      <h2 style="margin: 0; font-size: clamp(2.4rem,5.6vw,4.6rem); line-height: 1; letter-spacing: -0.05em; font-weight: 800; text-transform: uppercase;">Trabajemos <span style="color: #6EA2F5;">juntos</span></h2>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.2rem;">
+        <a href="mailto:lm.biottiflores@gmail.com" style="display: inline-flex; align-items: center; gap: 0.9rem; padding: 0.45rem 0.45rem 0.45rem 1.4rem; border-radius: 999px; background: var(--paper); color: var(--ink); font-size: 0.92rem; font-weight: 600;" style-hover="color: var(--ink);">lm.biottiflores@gmail.com <span style="width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center;">↗</span></a>
+        <a href="https://www.linkedin.com/in/laurabiottiflores/" target="_blank" rel="noopener" style="padding: 0.9rem 1.4rem; border-radius: 999px; border: 1px solid rgba(246,244,241,.4); font-size: 0.92rem; font-weight: 600;" style-hover="border-color: var(--paper); color: var(--paper);">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; padding: 1.8rem clamp(1.1rem,4vw,3rem); border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--gray);">
+  <a href="#inicio" style="font-weight: 800; letter-spacing: -0.04em; font-size: 1.05rem; color: var(--ink);">LAURA<span style="color: var(--blue); padding: 0 0.1em;">⁄</span>BIOTTI</a>
+  <p style="margin: 0;">© 2026 Diseñado y desarrollado por Laura Biotti Flores · Santiago, Chile</p>
+  <a href="#inicio" style-hover="color: var(--ink);">Volver arriba ↑</a>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  fit = (frame) => {
+    const box = frame && frame.parentElement;
+    if (!box) return;
+    box.style.height = '640px';
+    let w = 600;
+    try {
+      const d = frame.contentDocument;
+      if (d && d.documentElement) {
+        if (!d.getElementById('__fit')) {
+          const s = d.createElement('style'); s.id = '__fit';
+          s.textContent = 'html,body{overflow-x:hidden!important;margin:0}';
+          (d.head || d.documentElement).appendChild(s);
+        }
+        frame.style.width = '600px';
+        w = Math.max(600, d.body ? d.body.scrollWidth : 0);
+        frame.style.width = w + 'px';
+      }
+    } catch (e) {}
+    const scale = Math.min(1, box.clientWidth / w);
+    frame.style.height = (box.clientHeight / scale) + 'px';
+    frame.style.transform = 'scale(' + scale + ')';
+    frame.style.left = Math.max(0, (box.clientWidth - w * scale) / 2) + 'px';
+  };
+  fitAll = () => document.querySelectorAll('[data-email-box] iframe').forEach(this.fit);
+  state = { mobile: false, menuOpen: false, projOpen: false };
+  onMq = () => { const m = window.matchMedia('(max-width: 760px)').matches; if (m !== this.state.mobile) this.setState({ mobile: m, menuOpen: false }); };
+  fitName = () => {
+    const e = document.querySelector('[data-name-e]'), p = document.querySelector('[data-name-p]');
+    if (!e || !p) return;
+    const h1 = e.closest('h1');
+    p.style.width = Math.round(e.getBoundingClientRect().right - h1.getBoundingClientRect().left) + 'px';
+  };
+  fitHeader = () => {
+    const hd = document.querySelector('[data-site-header]'), sp = document.querySelector('[data-header-spacer]');
+    if (hd && sp) { sp.style.height = hd.offsetHeight + 'px'; document.documentElement.style.scrollPaddingTop = hd.offsetHeight + 'px'; }
+  };
+  componentDidMount() {
+    document.documentElement.lang = 'es';
+    this.mq = window.matchMedia('(max-width: 760px)');
+    this.mq.addEventListener('change', this.onMq);
+    this.onMq();
+    window.addEventListener('resize', this.fitName);
+    this.hdRo = new ResizeObserver(this.fitHeader);
+    const hd = document.querySelector('[data-site-header]');
+    if (hd) this.hdRo.observe(hd);
+    this.fitHeader();
+    this.nameRo = new ResizeObserver(this.fitName);
+    const n = document.querySelector('[data-name-e]');
+    if (n) this.nameRo.observe(n.closest('h1'));
+    document.fonts && document.fonts.ready.then(this.fitName);
+    this.fitName();
+    this.ro = new ResizeObserver(() => this.fitAll());
+    document.querySelectorAll('[data-email-box]').forEach(b => this.ro.observe(b));
+    this.fitAll();
+    this.t = setTimeout(this.fitAll, 1500);
+  }
+  componentWillUnmount() { this.mq && this.mq.removeEventListener('change', this.onMq); window.removeEventListener('resize', this.fitName); this.hdRo && this.hdRo.disconnect(); this.nameRo && this.nameRo.disconnect(); this.ro && this.ro.disconnect(); clearTimeout(this.t); }
+  renderVals() {
+    const tools = [
+      ['Figma', 'assets/tools/figma.svg'], ['Figma Make', 'assets/tools/figma.svg'], ['Salesforce Marketing Cloud', 'assets/tools/sfmc.png', true],
+      ['Illustrator', 'assets/tools/ai.png'], ['Photoshop', 'assets/tools/ps.png'], ['Acrobat', 'assets/tools/acrobat.png'], ['Claude', 'assets/tools/claude.svg']
+    ];
+    const seq = [...tools, ...tools, ...tools, ...tools];
+    const h = React.createElement;
+    const marquee = h('div', { 'aria-hidden': true, style: { display: 'flex', width: 'max-content', animation: 'marquee 40s linear infinite' } },
+      seq.map(([n, src, wide], i) => h('span', { key: i, style: { display: 'inline-flex', alignItems: 'center', gap: '0.6rem', paddingRight: '2.2rem', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '-0.02em', color: '#555555', whiteSpace: 'nowrap' } },
+        wide ? h('img', { src, alt: '', style: { height: '2rem', width: 'auto', display: 'block' } })
+             : [h('img', { key: 'i', src, alt: '', style: { width: '1.6rem', height: '1.6rem', objectFit: 'contain', display: 'block' } }), n])));
+    const mobile = this.state.mobile, open = this.state.menuOpen;
+    return {
+      mobile, desktop: !mobile, menuOpen: open ? 'true' : 'false', menuVisible: mobile && open,
+      menuLabel: open ? 'Cerrar' : 'Menú',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      projOpen: this.state.projOpen, projExpanded: this.state.projOpen ? 'true' : 'false', projArrow: this.state.projOpen ? 'rotate(180deg)' : 'none',
+      toggleProj: () => this.setState(s => ({ projOpen: !s.projOpen })),
+      closeProj: () => this.setState({ projOpen: false }),
+      marquee,
+      onFrameLoad: (e) => { const f = e.currentTarget; this.fit(f); setTimeout(() => this.fit(f), 800); },
+      skills: ['Diseño de producto digital', 'Email marketing y SFMC', 'Sistemas de diseño', 'Diseño gráfico editorial'],
+      emails: [
+        { kind: 'Vinci Compass · Brasil', title: 'Pipeline de Produtos', src: 'emails/pipeline-de-productos.html', desc: 'Hoja de ruta de fondos alternativos para inversionistas individuales, con una tabla de estrategias por etapa de madurez.' },
+        { kind: 'Vinci Compass · Chile', title: 'The AI Opportunity Set', src: 'emails/the-ai-opportunity-set.html', desc: 'Envío personalizado junto a una gestora internacional sobre soluciones de inversión a lo largo de la cadena de valor de la IA.' },
+        { kind: 'Vinci Compass · Chile', title: '¿Exposición a commodities?', src: 'emails/exposicion-a-commodities.html', desc: 'Estrategia de inversión con gráficos de demanda eléctrica y recursos clave: cobre, litio y gas natural.' }
+      ],
+      demos: [
+        { slot: 'demo-petstore', img: 'assets/demo-huella.png', kind: 'E-commerce · Mascotas', title: 'Huella', url: 'https://www.figma.com/make/bGkgDBfpUjkkIsMtdQ4uas/E-commerce-pet-store-website?t=6y7oOooQyc1GGAMD-1', desc: 'Tienda para mascotas con búsqueda destacada, categorías por perro y gato, beneficios de despacho y carrito de compra.' },
+        { slot: 'demo-makeup', img: 'assets/demo-rouge.png', kind: 'E-commerce · Maquillaje', title: 'Rouge', url: 'https://www.figma.com/make/5YY86ImkIFf26qXp0y1xtt/Make-up?t=B8dgjZuPbSgJX6SS-1', desc: 'Tienda online de maquillaje de lujo: portada editorial a pantalla completa, colecciones, ofertas y club de clientas.' }
+      ],
+      projects: [
+        { num: '01', img: 'assets/prostata-card.png', kind: 'Programa', title: 'Programa Cáncer de Próstata Avanzado', pdf: 'docs/cancer-prostata.pdf', desc: 'Jerarquía de contenido médico, reserva de hora y presentación del equipo clínico, pensada para lectura rápida en móvil.' },
+        { num: '02', img: 'assets/animo-card.png', kind: 'Unidad', title: 'Unidad de Trastornos del Ánimo', pdf: 'docs/trastornos-del-animo.pdf', desc: 'Landing de salud mental: estructura clara para servicios, especialistas y contacto, con un tono cercano y accesible.' },
+        { num: '03', img: 'assets/eii-card.png', kind: 'Unidad', title: 'Unidad de Enfermedades Intestinales Inflamatorias', pdf: 'docs/eii-original.pdf', desc: 'Acreditación PANCCO, enfoque multidisciplinario, equipo médico y de enfermería, y preguntas frecuentes, con la reserva de hora siempre visible.' },
+        { num: '04', img: 'assets/reproductiva-card.png', kind: 'Unidad', title: 'Unidad de Medicina Reproductiva', pdf: 'docs/medicina-reproductiva.pdf', desc: 'Infertilidad femenina, masculina, laboratorio y apoyo psicológico organizados como recorridos paralelos, con un tono cercano.' },
+        { num: '05', img: 'assets/paliativos-card.png', kind: 'Programa', title: 'Cuidados Paliativos Perinatales', pdf: 'docs/cuidados-paliativos-perinatales.pdf', desc: 'aCompañar-es: una página que acoge a familias en el momento más difícil, con misión, visión y lo que ofrece el programa.' }
+      ],
+      specs: [
+        { label: 'Ancho estándar / con tablas', val: '600 / 745 px' },
+        { label: 'Tipografía', val: 'Calibri' },
+        { label: 'Título · subtítulo · cuerpo', val: '24–20 · 18 · 16 px' },
+        { label: 'Botones: alto, radio', val: '48 px · 6 px' },
+        { label: 'Azul · celeste', val: '#0030AF · #00AEEF' },
+        { label: 'Imágenes', val: '.png con alt' }
+      ],
+      experience: [
+        { when: 'Actualidad', logo: 'logo-vinci', src: 'assets/logos/vinci-compass.png', logoH: '3.3rem', org: 'Vinci Compass — vía Wodobox', role: 'Diseñadora gráfica y desarrolladora web', desc: 'Diseño y desarrollo de mailings en Marketing Cloud de Salesforce (HTML inline responsivo) para distintos clientes, construidos en Content Builder.' },
+        { when: 'Jul 2025 – May 2026', logo: 'logo-ucchristus', src: 'assets/logos/uc-christus.png', logoH: '3.3rem', org: 'UC CHRISTUS — vía Wodobox', role: 'Diseñadora de productos digitales externa', desc: 'Productos digitales, landing pages, prototipos y contenido para redes sociales y email marketing en el sector salud.' },
+        { when: 'Jul 2025 – Actualidad', logo: 'logo-wodobox', src: 'assets/logos/wodobox.png', logoH: '2.4rem', org: 'Wodobox', role: 'Consultora Marketing Cloud Salesforce', desc: 'Email marketing en Content Builder, manejo de bases de datos y construcción de informes de salud.' },
+        { when: 'Ene 2024 – Mar 2024', logo: 'logo-bice', src: 'assets/logos/banco-bice.svg', logoH: '3.3rem', org: 'Banco BICE', role: 'Práctica profesional', desc: 'Colaboración en un sistema de diseño para consistencia visual y funcional, pantallas y piezas de marketing, con foco en arquitectura de información y UX.' },
+        { when: '2019 – 2023', logo: 'logo-duoc', src: 'assets/logos/duoc-uc.jpg', logoH: '3.3rem', org: 'Duoc UC', role: 'Diseño gráfico', desc: 'Formación en diseño gráfico, con base en composición, tipografía e identidad visual.' }
+      ]
+    };
+  }
+}
+</script>
 </body>
 </html>
